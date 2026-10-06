@@ -32,6 +32,16 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = pausado ? 0f : 1f;
     }
 
+    public void FecharMenuPausa()
+    {
+        pausado = false;
+
+        painelPausa.SetActive(false);
+        painelSlotsPausa.SetActive(false);
+
+        Time.timeScale = 1f;
+    }
+
     public void SalvarJogo()
     {
         modoSalvar = true;
